@@ -12,11 +12,16 @@ router.get("/", (req, res) => {
 
 /* POST create user. */
 router.post("/", (req, res) => {
-  return res.json({
-    id: 1,
-    name: "Gabriel Yonathan",
-    role: "admin",
-  });
+  return res.json(req.body);
 });
 
+/* PUT update user. */
+router.put("/", (req, res) => {
+  return res.json(req.body);
+});
+
+/* DELETE deleting user. */
+router.delete("/", (req, res) => {
+  return res.json(req.body);
+});
 module.exports = router;
