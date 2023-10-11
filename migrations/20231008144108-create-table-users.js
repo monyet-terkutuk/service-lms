@@ -27,7 +27,7 @@ module.exports = {
         allowNull: false,
       },
       number_phone: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       image_profile: {

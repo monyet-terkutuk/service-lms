@@ -1,45 +1,21 @@
 const express = require("express");
-const { User } = require("../models");
 const router = express.Router();
+const userHandler = require("./handlers/users");
+const userIdHandler = require("./handlers/users/id");
 
-/* GET users listing. */
-router.get("/", (req, res) => {
-  return res.json({
-    id: 1,
-    name: "Gabriel Yonathan",
-    role: "admin",
-  });
-});
+// Get all users data
+router.get("/", userHandler.get);
 
-/* POST create user. */
-router.post("/", async (req, res) => {
-  const body = req.body;
+// Create a user data
+router.post("/", userHandler.post);
 
-  // Pastikan semua field wajib ada
-  if (
-    !body.name ||
-    !body.nim ||
-    !body.email ||
-    !body.division ||
-    !body.number_phone
-  ) {
-    return res
-      .status(400)
-      .json({ message: "All required fields must be provided!" });
-  }
+// Get user by id
+router.get("/:userId", userIdHandler.get);
 
-  // Buat entitas pengguna
-  const user = await User.create(body);
-  return res.json(user);
-});
+// Edit user by id
+router.put("/:userId", userIdHandler.put);
 
-/* PUT update user. */
-router.put("/", (req, res) => {
-  return res.json(req.body);
-});
+// Delete user by id
+router.delete("/:userId", userIdHandler.delete);
 
-/* DELETE deleting user. */
-router.delete("/", (req, res) => {
-  return res.json(req.body);
-});
 module.exports = router;
