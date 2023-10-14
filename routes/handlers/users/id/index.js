@@ -1,3 +1,3 @@
-exports.get = require("./get");
-exports.put = require("./put");
-exports.delete = require("./delete");
+exports.getUserById = require("./getUserById");
+exports.editUserById = require("./editUsersById");
+exports.deleteUserById = require("./deleteUsersById");

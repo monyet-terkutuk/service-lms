@@ -1,5 +1,6 @@
 GET http://localhost:3000/users
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUdzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxMywibmFtZSI6Ik1vbnlldCBEYW1tIiwibmltIjoiMzQzNDIzMiIsImVtYWlsIjoiZ0BnbWFpbC5jb20iLCJpbWFnZV9wcm9maWxlIjoiZnNkZmVkZSIsImRpdmlzaW9uIjoiTXVsdGltZWRpYSIsInJvbGUiOiJtZW50b3IiLCJudW1iZXJfcGhvbmUiOiIwODk1NjIyMDYwNjE5In0sImlhdCI6MTY5NzI5NTI1Nn0.OA1CkBZW1YId9X_j-bAoIA5McfMVD5_A-PfipGYnvw8
 
 ###
 POST  http://localhost:3000/users
@@ -19,15 +20,16 @@ GET http://localhost:3000/users/6
 Content-Type: application/json
 
 ###
-PUT  http://localhost:3000/users/5
+PUT  http://localhost:3000/users/1
 Content-Type: application/json
 
 {
-    "name":"Monyet Cuki Cuki",
+    "name":"Gabriel Yonathan",
     "nim":"3434232",
     "image_profile":"fsdfede",
     "division": "Multimedia",
     "email": "gabriel@gmail.com",
+    "role": "admin",
     "number_phone": "0895622060619"
 }
 

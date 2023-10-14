@@ -1,0 +1,23 @@
+POST  http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "name":"Monyet Damm",
+    "nim":"3434232",
+    "image_profile":"fsdfede",
+    "division": "Multimedia",
+    "password": "sdsafdaf",
+    "role": "mentor",
+    "email": "g@gmail.com",
+    "number_phone": "0895622060619"
+}
+
+###
+POST  http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"g@gmail.com",
+    "password": "sdsafdaf"
+}
+

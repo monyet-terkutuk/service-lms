@@ -1,2 +1,2 @@
-exports.get = require("./get");
-exports.post = require("./post");
+exports.getAllUsers = require("./getAllUsers");
+exports.createUser = require("./createUser");

@@ -17,7 +17,7 @@
     "username": "root",
     "password": null,
     "database": "express_lms",
-    "host": "127.0.0.1",
+    "host": "0.0.0.0",
     "dialect": "mysql"
   }
 }
