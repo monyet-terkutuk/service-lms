@@ -59,6 +59,10 @@ module.exports = async (req, res) => {
 
   const token = jwt.sign({ data }, "confidentialdata");
 
+  // const token = jwt.sign({ data }, "confidentialdata", {
+  //   expiresIn: "1d",
+  // });
+
   return res.status(200).json({
     meta: {
       message: "Authentication successful",

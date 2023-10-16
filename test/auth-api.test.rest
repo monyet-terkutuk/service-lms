@@ -7,8 +7,8 @@ Content-Type: application/json
     "image_profile":"fsdfede",
     "division": "Multimedia",
     "password": "sdsafdaf",
-    "role": "mentor",
-    "email": "gs@gmail.com",
+    "role": "admin",
+    "email": "gabriell@gmail.com",
     "number_phone": "0895622060619"
 }
 
@@ -17,7 +17,9 @@ POST  http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email":"g@gmail.com",
+    "email":"gabriel@gmail.com",
     "password": "sdsafdaf"
 }
 
+# "email":"gabriell@gmail.com",
+#     "password": "sdsafdaf"

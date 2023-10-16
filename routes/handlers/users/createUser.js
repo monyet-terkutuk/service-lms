@@ -17,6 +17,21 @@ module.exports = async (req, res) => {
       .json({ message: "All required fields must be provided!" });
   }
 
+  const isEmailUsed = await User.findOne({
+    where: { email: body.email },
+  });
+
+  if (isEmailUsed) {
+    return res.status(400).json({
+      meta: {
+        message: "Email has been used",
+        code: 400,
+        status: "error",
+      },
+      data: null,
+    });
+  }
+
   // Set nilai default role jika tidak disediakan
   body.role = body.role || "student";
 

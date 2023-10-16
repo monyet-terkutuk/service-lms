@@ -35,6 +35,21 @@ module.exports = async (req, res) => {
     });
   }
 
+  const isEmailUsed = await User.findOne({
+    where: { email: body.email },
+  });
+
+  if (isEmailUsed) {
+    return res.status(400).json({
+      meta: {
+        message: "Email has been used",
+        code: 400,
+        status: "error",
+      },
+      data: null,
+    });
+  }
+
   await user.update(req.body);
 
   return res.json({
