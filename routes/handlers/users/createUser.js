@@ -35,8 +35,13 @@ module.exports = async (req, res) => {
       data: user,
     });
   } catch (error) {
-    return res
-      .status(500)
-      .json({ message: "Error creating user", error: error });
+    return res.status(500).json({
+      meta: {
+        message: "Error creating user",
+        code: 500,
+        status: "error",
+      },
+      data: null,
+    });
   }
 };

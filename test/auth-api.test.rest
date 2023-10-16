@@ -8,7 +8,7 @@ Content-Type: application/json
     "division": "Multimedia",
     "password": "sdsafdaf",
     "role": "mentor",
-    "email": "g@gmail.com",
+    "email": "gs@gmail.com",
     "number_phone": "0895622060619"
 }
 

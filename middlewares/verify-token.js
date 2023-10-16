@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { User } = require("../models");
 
 module.exports = async (req, res, next) => {
   const token = req.headers.authorization;
@@ -29,9 +30,23 @@ module.exports = async (req, res, next) => {
       });
     }
 
-    console.log(data);
+    const user = await User.findByPk(data.data.id);
+
+    if (!user)
+      return res.status(404).json({
+        meta: {
+          message: "User not found",
+          code: 404,
+          status: "error",
+        },
+        data: null,
+      });
+
+    req.user = user;
+
     next();
   } catch (error) {
+    console.log(error);
     return res.status(403).json({
       meta: {
         message: "Token verification failed",

@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
   ) {
     return res.status(400).json({
       meta: {
-        message: "Bad Request",
+        message: "All required fields must be provided!",
         code: 400,
         status: "error",
       },
