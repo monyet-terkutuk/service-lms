@@ -10,36 +10,39 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      name: {
+      user_id: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      nim: {
+      title: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      materi: {
+        type: Sequelize.TEXT,
+        allowNull: true,
+      },
+      link_video: {
         type: Sequelize.STRING,
         allowNull: false,
       },
       division: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
-      email: {
+      playlist: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      password: {
+      slug: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      role: {
-        type: Sequelize.ENUM,
-        values: ["admin", "mentor", "student"],
-        defaultValue: "student",
-      },
-      number_phone: {
+      category: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
-      image_profile: {
+      image_course: {
         type: Sequelize.STRING,
         allowNull: true,
       },
