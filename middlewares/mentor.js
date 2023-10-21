@@ -1,7 +1,7 @@
 module.exports = async (req, res, next) => {
   const { user } = req;
 
-  if (!user || user.role !== "admin" || user.role !== "mentor") {
+  if (!user || (user.role !== "admin" && user.role !== "mentor")) {
     return res.status(403).json({
       meta: {
         message: "You are not authorized to access this data.",

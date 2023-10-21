@@ -1,0 +1,20 @@
+GET http://localhost:3000/courses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiTW9ueWV0IERhbW0iLCJuaW0iOiIzNDM0MjMyIiwiZW1haWwiOiJnYWJyaWVsbEBnbWFpbC5jb20iLCJpbWFnZV9wcm9maWxlIjoiZnNkZmVkZSIsImRpdmlzaW9uIjoiTXVsdGltZWRpYSIsInJvbGUiOiJhZG1pbiIsIm51bWJlcl9waG9uZSI6IjA4OTU2MjIwNjA2MTkifSwiaWF0IjoxNjk3ODc3Mjk2fQ.gbNXLSIKyxH5sASc3nW97p-x062sl5hsizqCBVVGAEg
+
+###
+POST http://localhost:3000/courses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiTW9ueWV0IERhbW0iLCJuaW0iOiIzNDM0MjMyIiwiZW1haWwiOiJnYWJyaWVsbEBnbWFpbC5jb20iLCJpbWFnZV9wcm9maWxlIjoiZnNkZmVkZSIsImRpdmlzaW9uIjoiTXVsdGltZWRpYSIsInJvbGUiOiJhZG1pbiIsIm51bWJlcl9waG9uZSI6IjA4OTU2MjIwNjA2MTkifSwiaWF0IjoxNjk3ODc3Mjk2fQ.gbNXLSIKyxH5sASc3nW97p-x062sl5hsizqCBVVGAEg
+
+{
+    "user_id": 1,
+    "title": "Belajar Interface di GO",
+    "materi": "Bukan Lorem",
+    "link_video": "ini link",
+    "division": "Multimedia",
+    "playlist": "Dasar Golang",
+    "slug": "belajar-interface-di-go",
+    "category": "backend",
+    "image_course": "dsad"
+}

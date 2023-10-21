@@ -15,6 +15,7 @@ npx sequelize db:migrate:undo
 
 npx sequelize migration:create --name=create-table-courses
 
+# Jalankeun perintah ie za di terminal
 npx sequelize db:migrate:undo
 
 npx sequelize db:migrate
