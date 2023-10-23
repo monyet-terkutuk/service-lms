@@ -8,8 +8,7 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const coursesRouter = require("./routes/courses");
-const verifyToken = require("./middlewares/verify-token");
-const admin = require("./middlewares/admin");
+const challengesRouter = require("./routes/challenges");
 
 const app = express();
 
@@ -24,5 +23,6 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 app.use("/courses", coursesRouter);
+app.use("/challenges", challengesRouter);
 
 module.exports = app;

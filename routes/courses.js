@@ -5,17 +5,13 @@ const router = express.Router();
 const courseHandler = require("./handlers/courses");
 const courseIdHandler = require("./handlers/courses/id");
 
-// get all courses
+// public access
 router.get("/", verifyToken, courseHandler.getAllCourses);
+router.get("/:courseId", verifyToken, courseIdHandler.getCourseById);
 
-// create courses
+// mentor and admin access
 router.post("/", verifyToken, mentor, courseHandler.createCourses);
-
-// upadate course by id
 router.put("/:courseId", verifyToken, mentor, courseIdHandler.editCourseById);
-
-router.get("/:courseId", verifyToken, mentor, courseIdHandler.getCourseById);
-
 router.delete(
   "/:courseId",
   verifyToken,

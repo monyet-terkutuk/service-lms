@@ -2,7 +2,7 @@ const { Course } = require("../../../models");
 
 // Get all courses data
 module.exports = async (req, res) => {
-  const users = await Course.findAll();
+  const courses = await Course.findAll();
 
   return res.json({
     meta: {
@@ -10,6 +10,6 @@ module.exports = async (req, res) => {
       code: 200,
       status: "success",
     },
-    data: users,
+    data: courses,
   });
 };
