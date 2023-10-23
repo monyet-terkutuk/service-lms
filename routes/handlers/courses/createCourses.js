@@ -6,9 +6,14 @@ module.exports = async (req, res) => {
   const body = req.body;
 
   if (!body.title || !body.link_video || !body.playlist) {
-    return res
-      .status(400)
-      .json({ message: "All required fields must be provided!" });
+    return res.status(400).json({
+      meta: {
+        message: "Bad request",
+        code: 400,
+        status: "error",
+      },
+      data: "All required fields must be provided!",
+    });
   }
 
   try {
