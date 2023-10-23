@@ -19,3 +19,10 @@ npx sequelize migration:create --name=create-table-courses
 npx sequelize db:migrate:undo
 
 npx sequelize db:migrate
+
+npx sequelize migration:create --name=create-table-challenges
+
+# ie za keur table challenges
+npx sequelize db:migrate:undo
+
+npx sequelize db:migrate
