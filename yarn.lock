@@ -79,7 +79,7 @@
     "@aws-sdk/util-utf8-browser" "^3.0.0"
     tslib "^1.11.1"
 
-"@aws-sdk/client-s3@^3.445.0":
+"@aws-sdk/client-s3@^3.226.0", "@aws-sdk/client-s3@^3.445.0":
   version "3.445.0"
   resolved "https://registry.npmjs.org/@aws-sdk/client-s3/-/client-s3-3.445.0.tgz"
   integrity sha512-2G+3MnO78irZRjlfkdvtlKRQ3yuOfrRMg8mztKpMw0q/9WHtwCcmaUUpl1bXwJ+BcNTVHopLQXdbzCeaxxI92w==
@@ -574,6 +574,13 @@
   integrity sha512-TqELu4mOuSIKQCqj63fGVs86Yh+vBx5nHRpWKNUNhB2nPTpfbziTs5c1X358be3peVWA4wPxW7Nt53KIg1tnNw==
   dependencies:
     tslib "^2.5.0"
+
+"@cyclic.sh/s3fs@^1.2.9":
+  version "1.2.9"
+  resolved "https://registry.npmjs.org/@cyclic.sh/s3fs/-/s3fs-1.2.9.tgz"
+  integrity sha512-1NDH/Vba5PG47TNBIrKb21MNo8hsI+Msmb5jojo/RHC9Q+5TqhuJn4zpd3xwUzV16LNG7YicrOUjj9P6UuLswA==
+  dependencies:
+    "@aws-sdk/client-s3" "^3.226.0"
 
 "@mapbox/node-pre-gyp@^1.0.11":
   version "1.0.11"
