@@ -2,7 +2,7 @@ const { Course } = require("../../../../models");
 const fs = require("@cyclic.sh/s3fs/promises");
 require("dotenv").config();
 
-const s3fs = fs(AWS_S3_BUCKET_NAME, {
+const s3fs = fs("cyclic-magenta-tortoise-yoke-us-west-1", {
   region: process.env.AWS_REGION,
   credentials: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
 
   try {
     const params = {
-      Bucket: AWS_S3_BUCKET_NAME,
+      Bucket: "cyclic-magenta-tortoise-yoke-us-west-1",
       Key: `images/courses/${req.file.filename}`,
       Body: req.file.buffer,
       ACL: "public-read",
@@ -38,7 +38,9 @@ module.exports = async (req, res) => {
     await s3fs.writeFile(params.Key, params.Body, { ACL: params.ACL });
 
     // Update database with the URL of the image in AWS S3
-    body.image_course = `https://${AWS_S3_BUCKET_NAME}.s3-${process.env.AWS_REGION}.amazonaws.com/${params.Key}`;
+    body.image_course = `https://${"cyclic-magenta-tortoise-yoke-us-west-1"}.s3-${
+      process.env.AWS_REGION
+    }.amazonaws.com/${params.Key}`;
 
     await course.update({ ...body });
 
