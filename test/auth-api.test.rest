@@ -13,8 +13,8 @@ Content-Type: application/json
 }
 
 ###
-# POST  https://backend-csa-learning.cyclic.app/auth/login
-POST  http://localhost:3000/auth/login
+# POST  http://localhost:3000/auth/login
+POST  https://backend-csa-learning.cyclic.app/auth/login
 Content-Type: application/json
 
 {
