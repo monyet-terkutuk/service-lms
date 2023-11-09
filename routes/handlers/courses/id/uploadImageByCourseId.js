@@ -1,8 +1,8 @@
 const { Course } = require("../../../../models");
-const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
+const fs = require("@cyclic.sh/s3fs/promises");
 require("dotenv").config();
 
-const s3Client = new S3Client({
+const s3fs = fs(S3_BUCKET_NAME, {
   region: process.env.AWS_REGION,
   credentials: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -28,21 +28,18 @@ module.exports = async (req, res) => {
 
   try {
     const params = {
-      Bucket: process.env.AWS_S3_BUCKET_NAME, // Ganti dengan variabel lingkungan nama bucket AWS S3 kamu
+      Bucket: S3_BUCKET_NAME,
       Key: `images/courses/${req.file.filename}`,
       Body: req.file.buffer,
       ACL: "public-read",
     };
-    console.error();
 
-    // Mengunggah file ke AWS S3 menggunakan AWS SDK for JavaScript versi 3
-    await s3Client.send(new PutObjectCommand(params));
-    console.error();
+    // Upload file to AWS S3 using @cyclic.sh/s3fs/promises
+    await s3fs.writeFile(params.Key, params.Body, { ACL: params.ACL });
 
-    // Update database dengan URL gambar di AWS S3
-    body.image_course = `https://${process.env.AWS_S3_BUCKET_NAME}.s3-${process.env.AWS_REGION}.amazonaws.com/${params.Key}`;
+    // Update database with the URL of the image in AWS S3
+    body.image_course = `https://${S3_BUCKET_NAME}.s3-${process.env.AWS_REGION}.amazonaws.com/${params.Key}`;
 
-    console.error();
     await course.update({ ...body });
 
     return res.json({
