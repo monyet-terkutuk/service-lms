@@ -53,8 +53,6 @@ module.exports = async (req, res) => {
       data: body.image_course,
     });
   } catch (error) {
-    console.error(error);
-
     return res.status(500).json({
       meta: {
         message: "Internal server error",
