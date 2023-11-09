@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "mhhfke68vtimqhmjvdvv",
-    "password": "pscale_pw_UMYqwilStCfZB31PSB9ix0Qoc11Y4SQd06QbC0B0KEU",
+    "username": "w5c0dptvmk08yasoigeo",
+    "password": "pscale_pw_mCY2ARB7TVlw3nFhkqxs0sZObVIvoDsphxJRzoUtIc9",
     "database": "db-lms",
     "host": "aws.connect.psdb.cloud",
     "dialect": "mysql",
@@ -12,8 +12,8 @@
     }
   },
   "test": {
-    "username": "mhhfke68vtimqhmjvdvv",
-    "password": "pscale_pw_UMYqwilStCfZB31PSB9ix0Qoc11Y4SQd06QbC0B0KEU",
+    "username": "w5c0dptvmk08yasoigeo",
+    "password": "pscale_pw_mCY2ARB7TVlw3nFhkqxs0sZObVIvoDsphxJRzoUtIc9",
     "database": "db-lms",
     "host": "aws.connect.psdb.cloud",
     "dialect": "mysql",
@@ -24,8 +24,8 @@
     }
   },
   "production": {
-    "username": "mhhfke68vtimqhmjvdvv",
-    "password": "pscale_pw_UMYqwilStCfZB31PSB9ix0Qoc11Y4SQd06QbC0B0KEU",
+    "username": "w5c0dptvmk08yasoigeo",
+    "password": "pscale_pw_mCY2ARB7TVlw3nFhkqxs0sZObVIvoDsphxJRzoUtIc9",
     "database": "db-lms",
     "host": "aws.connect.psdb.cloud",
     "dialect": "mysql",
