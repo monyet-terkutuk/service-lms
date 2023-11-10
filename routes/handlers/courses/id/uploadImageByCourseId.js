@@ -58,6 +58,7 @@ module.exports = async (req, res) => {
         message: "Internal server error",
         code: 500,
         status: "error",
+        error: error,
       },
       data: "Error uploading image course",
     });
