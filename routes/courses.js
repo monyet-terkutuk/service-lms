@@ -17,7 +17,6 @@ router.post(
   "/upload/:courseId",
   verifyToken,
   mentor,
-  upload.single("image_course"),
   courseIdHandler.uploadImageByCourseId
 );
 
